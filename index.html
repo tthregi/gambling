@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ami a szeremcsejáték mögött rejlik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="wwew.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+<header class="hero">
+  
+ 
+  <div class="wrap">
+    <h1>Ami a szerencsejáték mögött rejlik</h1>
+
+
+    
+    <p class="lede">Ez az oldal nem szerencsejáték-oldal. Megmutatja, hogyan épül fel a matematika és a pszichológia a nyerőgépek, a fogadóirodák és a lottó mögött — és egy kockázatmentes szimulátorral azt is átélheted, milyen érzés valójában, amikor a szabályokat eleve nem a te javadra találták ki.</p>
+    <div class="bignum-row">
+      <div class="bignum">
+        <div class="n">−10%</div>
+        <div class="cap">Ennyit veszít átlagosan minden elköltött zseton egy tipikus nyerőgépen. Nem pech — tervezés.</div>
+      </div>
+    </div>
+    <a href="#szimulator" class="cta">Kezdd a szimulátorral</a>
+  </div>
+</header>
+
+<section class="demo" id="szimulator">
+  <div class="wrap">
+    <h2>Próbáld ki — fiktív zsetonokkal</h2>
+    <div class="disclaimer">
+      Amit itt látsz, egy modell: kitalált zsetonokkal működik, valós pénz nincs a képben, és nem is lehet nyerni vagy veszíteni semmi valódit. A cél nem a szórakoztatás, hanem hogy megérezd, milyen egy olyan játék, amelynek szabályait eleve a szervező javára találták ki.
+    </div>
+
+    <div class="odds-table mono" aria-label="A szimulátor esélyei pörgetésenként">
+      <div class="odds-row"><span>Nincs nyeremény</span><span>62,9%</span></div>
+      <div class="odds-row"><span>Kis nyeremény (2×)</span><span>36,0%</span></div>
+      <div class="odds-row"><span>Közepes nyeremény (8×)</span><span>1,0%</span></div>
+      <div class="odds-row"><span>Fő nyeremény (100×)</span><span>0,1%</span></div>
+      <div class="odds-row total"><span>Visszafizetési arány (RTP)</span><span>90%</span></div>
+    </div>
+
+    <div class="machine">
+      <div class="cabinet">
+        <div class="reels" id="reels">
+          <div class="reel" id="reel0">🍒</div>
+          <div class="reel" id="reel1">🔔</div>
+          <div class="reel" id="reel2">⭐</div>
+        </div>
+        <button class="spin-btn" id="spinBtn">Pörgetés — 1 zseton</button>
+        <div class="msg" id="msg">20 zsetonnal indulsz.</div>
+      </div>
+
+      <div class="stats-panel">
+        <div class="stat-grid">
+          <div class="stat"><div class="label">Egyenleg</div><div class="val mono" id="statBalance">20</div></div>
+          <div class="stat"><div class="label">Pörgetések</div><div class="val mono" id="statSpins">0</div></div>
+          <div class="stat"><div class="label">Elköltve összesen</div><div class="val mono" id="statStaked">0</div></div>
+          <div class="stat"><div class="label">Visszakapva összesen</div><div class="val mono" id="statWon">0</div></div>
+          <div class="stat"><div class="label">Nettó eredmény</div><div class="val mono" id="statNet">0</div></div>
+          <div class="stat"><div class="label">Elméleti várható érték</div><div class="val mono neg" id="statExpected">0</div></div>
+        </div>
+        <button class="reset-link" id="resetBtn">Zsetonok újratöltése</button>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+<main class="dossier">
+
+  <section class="sheet">
+    <div  class="wrap prose">
+      <h2>Hogyan van kitalálva a matek</h2>
+      <p>A fenti esélyek nem véletlenszerűen kerültek ide: egy 90%-os visszafizetési arányú (RTP) nyerőgépet modelleznek, ami a valóságban is teljesen jellemző érték. Ez azt jelenti, hogy minden elköltött 100 zsetonból hosszú távon átlagosan 90 jön vissza — a fennmaradó 10 pedig garantáltan a szervezőnél marad.</p>
+      <p>Ez nem azon múlik, hogy szerencséd van-e aznap este. Ehhez csak annyi kell, hogy elég sok játékos elég sokat pörgessen: a nagy számok törvénye alapján a szervező eredménye így szinte pontosan a tervezett szinten áll meg — hónapról hónapra, kaszinóról kaszinóra. A bizonytalanság a te oldaladon van, nem az övékén.</p>
+      <p>A lottón és a legtöbb sportfogadásnál ugyanez az elv érvényesül, gyakran még kedvezőtlenebb aránnyal: a nyeremények összege mindig kisebb, mint a befizetések összege, a különbözet pedig a szervező bevétele. A "rendszer", a "módszer" vagy a "bevált stratégia" ezen a struktúrán semmit nem változtat, ha a játék maga tiszta véletlenen alapul.</p>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="wrap prose">
+      <h2>Amit közben az agyad csinál</h2>
+      <p>A fenti szimulátorban talán feltűnt egy-két "majdnem" pörgetés, amikor két szimbólum összeállt, a harmadik pedig épphogy nem. Ez a néhány trükk nagy részben magyarázza, miért nehéz abbahagyni egy olyan játékot, amelyben statisztikailag szinte biztosan veszítesz.</p>
+      <div class="defs">
+        <div class="def">
+          <h3>A majdnem-nyerés</h3>
+          <p>Amikor a gép kimenetele közel áll a nyeréshez, az agy szinte ugyanúgy reagál rá, mintha nyertél volna — pedig ez pontosan ugyanolyan vesztés, mint bármelyik másik. Nem véletlen, hogy sok gép kifejezetten gyakran hoz ilyen mintázatot.</p>
+        </div>
+        <div class="def">
+          <h3>A kiszámíthatatlan jutalom</h3>
+          <p>Egy jutalom, ami rendszertelenül, kiszámíthatatlan időzítéssel érkezik, sokkal erősebben köti le a figyelmet, mint egy megbízható, rendszeres jutalom. Ugyanez az elv áll sok más függőséget okozó viselkedés hátterében is.</p>
+        </div>
+        <div class="def">
+          <h3>A szerencsejátékos-tévhit</h3>
+          <p>Több egymást követő vesztés után könnyű azt érezni, hogy "most már jönnie kell" a nyerésnek. Egy tisztán véletlenen alapuló játékban azonban minden egyes pörgetés független az előzőtől — a gépnek nincs memóriája.</p>
+        </div>
+        <div class="def">
+          <h3>A kontroll illúziója</h3>
+          <p>Saját számok választása a lottón, egy "megérzés" követése fogadásnál, egy "szerencsés" gép keresése a teremben — mindez azt az érzést kelti, hogy befolyásolni tudjuk a kimenetelt, miközben a legtöbb esetben tiszta véletlenről van szó.</p>
+        </div>
+        <div class="def">
+          <h3>A veszteség üldözése</h3>
+          <p>Minél többet veszítesz, annál erősebb a vágy, hogy egy újabb tétben visszanyerd. Ez az a pont, ahol a tétek — és a veszteségek — a leggyorsabban nőnek.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="wrap prose">
+      <h2>Mekkora a probléma Magyarországon</h2>
+      <p>A hazai felmérések az elmúlt évtizedben módszertől és évtől függően eltérő, de hasonló irányba mutató számokat adtak: a felnőtt lakosság becsülhetően 1–4%-a mutat szerencsejáték-függőségre utaló jeleket, egy 2018-as felmérés szerint pedig a felnőttek több mint negyede tekinthető valamilyen szinten veszélyeztetett játékosnak. A leggyorsabb lefolyású, legmagasabb kockázatú játékok a kutatások szerint a nyerőgépek, a kaszinójátékok és az online póker.</p>
+      <div class="stat-strip">
+        <div class="item">
+          <div class="n">~100k</div>
+          <div class="l">becsült szerencsejáték-függő felnőtt Magyarországon a korábbi országos felmérések szerint</div>
+        </div>
+        <div class="item">
+          <div class="n">1/4</div>
+          <div class="l">a magyar felnőttek ekkora hányada tekinthető valamilyen szinten veszélyeztetett játékosnak</div>
+        </div>
+      </div>
+      <p style="margin-top:28px;">A függőség nem csak azt érinti, aki játszik: a hozzátartozók többsége arról számol be, hogy a családi anyagi helyzet romlott, amióta a szenvedély megjelent.</p>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="wrap prose">
+      <h2>Ismerd fel a jeleket</h2>
+      <p>Szakemberek jellemzően ezeket a jeleket vizsgálják annak megítélésére, hogy valakinél kialakulóban van-e a szerencsejáték-függőség:</p>
+      <ul class="signs">
+        <li>Egyre nagyobb tétekben játszik ugyanahhoz az izgalomhoz</li>
+        <li>Már többször sikertelenül próbálta abbahagyni vagy visszafogni a játékot</li>
+        <li>Veszteség után szinte azonnal újra próbálkozik, hogy "visszanyerje"</li>
+        <li>Eltitkolja vagy letagadja mások előtt, mennyit játszik vagy mennyit veszített</li>
+        <li>Kölcsönt vesz fel, vagy eladja a holmiját, hogy tovább játszhasson</li>
+        <li>A munkája, a tanulmányai vagy a kapcsolatai sérülnek a játék miatt</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="wrap prose">
+      <h2>Ha úgy érzed, elszaladt veled a játék</h2>
+      <p>Ez gyakoribb, mint gondolnád, és nem szégyen segítséget kérni — sem magad, sem egy hozzád közel álló ember miatt. Az alábbi lehetőségek ingyenesek.</p>
+      <div class="help-list">
+        <div class="help-item">
+          <div class="h-title">Szerencsejáték-függőségi segélyvonal</div>
+          <div class="h-num">06 1 411 6778</div>
+          <div class="h-note">Hétköznapokon 15–19 óra között, ingyenesen és névtelenül hívható.</div>
+        </div>
+        <div class="help-item">
+          <div class="h-title">Lelkisegély-szolgálat</div>
+          <div class="h-num">116-123</div>
+          <div class="h-note">A hét minden napján, a nap 24 órájában hívható, ingyenesen — nem csak szerencsejáték-problémával, bármilyen lelki nehézséggel.</div>
+        </div>
+        <div class="help-item">
+          <div class="h-title">Önkorlátozó nyilatkozat</div>
+          <div class="h-note" style="margin-top:0;">Magyarországon írásban kérhető a szerencsejáték-felügyeleti hatóságnál (NAV) egy önkorlátozó nyilatkozat. Ez után a legális játékszervezők kötelesek megtagadni a beléptetésedet — kaszinóban, játékteremben és online is.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
